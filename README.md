@@ -28,3 +28,12 @@ When retrieving the list, the data is passed through a custom generic `ISortingS
 3. Build the project and restore dependencies:
    ```bash
    dotnet build
+   dotnet run --project TodoAPI.Api/TodoAPI.Api.csproj
+
+# API Endpoints
+Once running, navigate to http://localhost:<port>/swagger to view the interactive UI.
+    GET /api/Tasks - Retrieves a list of all tasks.
+    POST /api/Tasks - Creates a new task and assigns an initial rank.
+    PUT /api/Tasks/{id} - Updates a task's title and details.
+    DELETE /api/Tasks/{id} - Removes a task from the database.
+    PATCH /api/Tasks/{id}/reorder - Re-evaluates and updates a task's LexoRank string based on its new previous and next neighbors.
